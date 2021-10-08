@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo apt update
 echo "Installing packages..."
 sudo apt install gcc g++ cmake git sqlite3 libsqlite3-dev
 echo ""
@@ -43,7 +44,18 @@ if ! exists gh; then
 fi
 sleep 0.1
 
+if ! exists rg; then
+  rg_name=$(curl -sS  https://api.github.com/repos/BurntSushi/ripgrep/releases/latest | grep -oE "ripgrep_(.*?)_amd64.deb" -m 1)
+  tag=${rg_name:8:${#rg_name}-18}
+  curl -LO "https://github.com/BurntSushi/ripgrep/releases/download/${tag}/ripgrep_${tag}_amd64.deb"
+  sudo dpkg -i $rg_name
+  if [ -f $rg_name ]; then
+    rm $rg_name
+  fi
+fi
+sleep 0.1
 
+echo ""
 echo "=============="
 echo "   dotfiles   "
 echo "=============="
