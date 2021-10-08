@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- create:
+    - ~/.ssh
+    - ~/.config
+    - ~/projects
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux/.tmux.conf
+
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitmessage: git/.gitmessage
+
+    ~/.config/lazygit/config.yml:
+      force: true
+      path: .config/lazygit/config.yml
