@@ -55,6 +55,17 @@ if ! exists rg; then
 fi
 sleep 0.1
 
+if ! exists delta; then
+  delta_name=$(curl -sS  https://api.github.com/repos/dandavison/delta/releases/latest | grep -oE "git-delta_(.*?)_amd64.deb" -m 1)
+  tag=${delta_name:10:${#delta_name}-20}
+  curl -LO "https://github.com/dandavison/delta/releases/download/${tag}/git-delta_${tag}_amd64.deb"
+  sudo dpkg -i $delta_name
+  if [ -f $delta_name ]; then
+    rm $delta_name
+  fi
+fi
+sleep 0.1
+
 echo ""
 echo "=============="
 echo "   dotfiles   "
