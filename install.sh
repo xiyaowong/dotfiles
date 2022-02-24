@@ -7,7 +7,9 @@ echo ""
 
 
 exists() {
-  type "$1" &> /dev/null;
+  which $APP > /dev/null 2>&1
+  rc=$?
+  return $rc == 0
 }
 
 
