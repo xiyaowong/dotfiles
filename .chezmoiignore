@@ -1,0 +1,3 @@
+{{ if ne .chezmoi.os "windows" }}
+run_once_set-windows-env.ps1.tmpl
+{{ end }}
