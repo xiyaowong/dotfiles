@@ -1,0 +1,19 @@
+[user]
+	name = xiyaowong
+	email = xiyao.wong@foxmail.com
+[credential "helperselector"]
+	selected = manager
+[commit]
+  template = ~/.gitmessage
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = true
+	ignorecase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[windows]
+	appendAtomically = false
