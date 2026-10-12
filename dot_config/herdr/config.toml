@@ -1,0 +1,49 @@
+onboarding = false
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+g"
+
+# Panes
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+split_vertical = "prefix+v"
+split_horizontal = "prefix+d"
+close_pane = "prefix+x"
+zoom = "prefix+f"
+rename_pane = "prefix+shift+p"
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
+
+# Tabs
+new_tab = "prefix+n"
+rename_tab = "prefix+shift+r"
+close_tab = "prefix+shift+x"
+# h and l are shared with focus_pane_left/right: one key, one direction.
+previous_tab = "prefix+h"
+next_tab = "prefix+l"
+switch_tab = "prefix+1..9"
+move_tab_previous = "prefix+shift+i"
+move_tab_next = "prefix+shift+o"
+
+# Scrollback
+copy_mode = "prefix+s"
+edit_scrollback = "prefix+e"
+
+# Resize mode; h/j/k/l move the divider.
+resize_mode = "prefix+r"
+
+# Workspaces and session
+workspace_picker = "prefix+w"
+toggle_sidebar = "prefix+z"
+settings = "prefix+c"
+reload_config = "prefix+shift+c"
+detach = "prefix+q"

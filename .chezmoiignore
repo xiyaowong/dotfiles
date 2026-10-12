@@ -1,3 +1,8 @@
 {{ if ne .chezmoi.os "windows" }}
 run_once_set-windows-env.ps1.tmpl
 {{ end }}
+
+.config/zellij/config.kdl.bak
+
+.config/herdr/*
+!.config/herdr/config.toml

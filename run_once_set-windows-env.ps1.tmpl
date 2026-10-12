@@ -1,11 +1,14 @@
 {{ if eq .chezmoi.os "windows" -}}
 
-$zellijConfig = Join-Path $HOME ".config\zellij"
-
 setx SHELL "pwsh"
-setx ZELLIJ_CONFIG_DIR "$zellijConfig"
-
 $env:SHELL="pwsh"
+
+$zellijConfig = Join-Path $HOME ".config/zellij"
+setx ZELLIJ_CONFIG_DIR "$zellijConfig"
 $env:ZELLIJ_CONFIG_DIR="$zellijConfig"
+
+$herdrConfig = Join-Path $HOME ".config/herdr/config.toml"
+setx HERDR_CONFIG_PATH "$herdrConfig"
+$env:HERDR_CONFIG_PATH="$herdrConfig"
 
 {{ end -}}
