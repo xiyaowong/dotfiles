@@ -5,7 +5,7 @@ $zellijConfig = Join-Path $HOME ".config\zellij"
 setx SHELL "pwsh"
 setx ZELLIJ_CONFIG_DIR "$zellijConfig"
 
-export SHELL="pwsh"
-export ZELLIJ_CONFIG_DIR="$zellijConfig"
+$env:SHELL="pwsh"
+$env:ZELLIJ_CONFIG_DIR="$zellijConfig"
 
 {{ end -}}
