@@ -47,3 +47,6 @@ toggle_sidebar = "prefix+z"
 settings = "prefix+c"
 reload_config = "prefix+shift+c"
 detach = "prefix+q"
+
+[ui]
+status_indicators = "symbols"
